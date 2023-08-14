@@ -9,6 +9,7 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import authRoutes from "./routes/auth.js";
+import userRoutes from "./routes/users.js";
 import { regester } from "./controllers/auth.js";
 
 /* Configirations */
@@ -40,8 +41,9 @@ const upload = multer({ storage });
 // us set the routes taht suing files here to use the upload metod
 app.post("/auth/regester", upload.single("picture"), regester);
 
-/* Routes without files */
+/* Routes */
 app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
 
 /* Mongoose Setup */
 const PORT = process.env.PORT || 6001;
