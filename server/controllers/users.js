@@ -1,5 +1,4 @@
-import { Promise } from "mongoose";
-import User from "../models/User";
+import User from "../models/User.js";
 
 // Get the user information
 export const getUser = async (req, res) => {
