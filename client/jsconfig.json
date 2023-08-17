@@ -1,0 +1,7 @@
+// to start with src while import files
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}
