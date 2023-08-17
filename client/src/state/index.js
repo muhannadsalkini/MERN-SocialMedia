@@ -1,4 +1,4 @@
-// stores redux and toolkit information
+// Redux and toolkit information
 
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -15,6 +15,7 @@ export const authSlice = createSlice({
   initialSate,
   reducers: {
     // actions - functions to change the global values
+    // "reducers" determine how the state should change based on the action
     setMode: (state) => {
       state.mode = state.mode === "light" ? "dark" : "light";
     },
